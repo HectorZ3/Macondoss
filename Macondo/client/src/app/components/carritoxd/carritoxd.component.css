@@ -1,0 +1,91 @@
+body {
+    background-color: #f9f4ef;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #5e4534;
+}
+
+h2 {
+    color: #5e4534;
+    font-weight: bold;
+}
+
+.breadcrumb {
+    background-color: #fff3e6;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb-item a {
+    color: #5e4534;
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+.carrito-container {
+    background-color: #fff3e6;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+    background-color: #f7e7d1;
+    border-radius: 10px;
+    border: 1px solid #d1bfa3;
+    color: #5e4534;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+.table th {
+    background-color: #f5e8d0;
+    color: #5e4534;
+}
+
+.table td img {
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: #b88b63;
+    border-color: #a67c4a;
+    color: #ffffff;
+}
+
+.btn:hover {
+    background-color: #a67c4a;
+    border-color: #8f6838;
+}
+
+.btn i {
+    color: #ffffff;
+}
+
+input[type="number"] {
+    border-radius: 5px;
+    border: 1px solid #d1bfa3;
+    background-color: #f7e7d1;
+    color: #6a4b35;
+}
+
+input[type="number"]:disabled {
+    background-color: #e8d9c4;
+}
+
+a.btn-success {
+    background-color: #b88b63;
+    border-color: #a67c4a;
+    color: #ffffff;
+}
+
+a.btn-success:hover {
+    background-color: #a67c4a;
+    border-color: #8f6838;
+}

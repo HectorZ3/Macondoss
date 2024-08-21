@@ -1,0 +1,71 @@
+<div *ngIf="usuarioExiste && idTipoUsuario===1" class="a-admin">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">
+      <img src="../../../assets/logo.png" width="150"class="d-inline-block align-top" style="margin-left: 20px;" alt="Logo">
+    </a>
+    <div class="ml-auto fuente" style="margin-left: 33%; font-size: 18px;">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/op-producto']" href="/op-producto">Operaciones producto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/pedidos']" href="/pedidos">Pedidos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/carrito']" href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://wa.me/+5214181154224"><i class="fa-brands fa-whatsapp fa-lg"></i></a>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-danger" (click)="cerrarSesion()">Cerrar sesión</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div *ngIf="usuarioExiste && idTipoUsuario===2" class="a-user">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">
+      <img src="../../../assets/logo.png" width="150"class="d-inline-block align-top" style="margin-left: 20px;" alt="Logo">
+    </a>
+    <div class="ml-auto fuente" style="margin-left: 45%; font-size: 18px;">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/inicio']" href="/inicio">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/pedidos']" href="/pedidos">Pedidos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/carrito']" href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://wa.me/+5214181154224"><i class="fa-brands fa-whatsapp fa-lg"></i></a>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-danger" (click)="cerrarSesion()">Cerrar sesión</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div *ngIf="!usuarioExiste && idTipoUsuario===0" class="a-common">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">
+      <img src="../../../assets/logo.png" width="150"class="d-inline-block align-top" style="margin-left: 20px;" alt="Logo">
+    </a>
+    <div class="ml-auto fuente" style="margin-left: 72%; font-size: 18px;">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/inicio']" href="/inicio">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://wa.me/+5214181154224"><i class="fa-brands fa-whatsapp fa-lg"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

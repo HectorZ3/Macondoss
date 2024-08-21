@@ -1,0 +1,97 @@
+body {
+  background-color: #f9f4ef;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #5e4534;
+}
+
+h2 {
+  color: #5e4534;
+  font-weight: bold;
+}
+
+.breadcrumb {
+  background-color: #fff3e6;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb-item a {
+  color: #5e4534;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+.carrito-container {
+  background-color: #fff3e6;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-floating {
+  margin-bottom: 15px;
+}
+
+.form-floating input,
+.form-floating select,
+.form-floating textarea {
+  border-radius: 5px;
+  border: 1px solid #d1bfa3;
+  background-color: #f7e7d1;
+  color: #6a4b35;
+}
+
+.form-floating input:focus,
+.form-floating select:focus,
+.form-floating textarea:focus {
+  box-shadow: none;
+  border-color: #b59373;
+}
+
+strong {
+  display: block;
+  margin-bottom: 10px;
+  color: #5e4534;
+}
+
+.custom-list-group1 {
+  background-color: #fff3e6;
+  border-radius: 10px;
+  border: 1px solid #d1bfa3;
+}
+
+.custom-list-group-item {
+  border: none;
+  background-color: #fff3e6;
+  color: #5e4534;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.custom-list-group-item img {
+  border-radius: 5px;
+}
+
+.carrito-total {
+  background-color: #f7e7d1;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bold;
+  color: #5e4534;
+  text-align: right;
+}
+
+.btn-success {
+  background-color: #b88b63;
+  border-color: #a67c4a;
+  color: #ffffff;
+}
+
+.btn-success:hover {
+  background-color: #a67c4a;
+  border-color: #8f6838;
+}

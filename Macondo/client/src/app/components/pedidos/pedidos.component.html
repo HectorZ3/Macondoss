@@ -1,0 +1,107 @@
+<div>
+    <h1 style="padding-top: 50px; margin-bottom: 40px;">Mis Pedidos</h1>
+  <div class="row">
+      <div class="col-md-3" *ngFor="let prod of pedidoData">
+        <div class="card h-100">
+          <div class="card-header">
+            <h5 class="card-title">ID de Pedido: {{prod.idPedido}}</h5>
+          </div>
+          <div class="card-img-container text-center">
+            <img src="../../../assets/pedido.png" class="card-img-top img-fluid custom-img" alt="Imagen de pedido">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <p class="card-text text-justify"><strong>Descripción: </strong>{{prod.descripcion}}</p>
+            <p class="card-text"><small class="text-muted">ID Usuario: {{prod.idUsuario}}</small></p>
+            <div class="text-center">
+              <button type="button" class="btn btn-success" style="width: 80%;" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="getUnPedido(prod.idPedido)"><i class="fa-solid fa-eye"></i> Ver pedido</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Pedido con ID: {{idPedidox}}</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row" *ngIf="!modifPedido">
+                <div class="col col-md-12">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="text-center">Imagen</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col" class="text-center">Cantidad</th>
+                        <th scope="col" class="text-center">Precio c/u</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let carrData of pedidoData2; let i = index;">
+                        <span hidden>{{i + 1}}</span>
+                        <td class="text-center"><img src="{{carrData.imagen}}" height="80px"></td>
+                        <td style="padding-top: 35px;">{{carrData.nombre}}</td>
+                        <td class="text-center" style="padding-top: 30px;">{{carrData.cantidad}}</td>
+                        <td class="text-center" style="padding-top: 35px;">$ {{carrData.precio}} MXN</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col" style="text-align: center;">Total: </th>
+                        <th scope="col" style="text-align: center ;">$ {{total}} MXN</th>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+              <div *ngIf="modifPedido">
+                <h4>Cambiar descripción:</h4>
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Breve descripción del pedido" id="descripcion" name="descripcion" style="height: 100px" [(ngModel)]="pedidoModal[0].descripcion"></textarea>
+                    <label for="descripcion">Breve descripción del pedido</label>
+                  </div>
+                  <h4>Productos:</h4>
+                <div class="row" *ngFor="let pxd of pedidoModal; let x=index" style="padding-bottom: 20px;">
+                  <span hidden>{{x+1}}</span>
+                  <div class="col col-md-7">
+                    <div class="form-floating mb-3">
+                      <select class="form-select" id="idProducto" name="idProducto" [(ngModel)]="pxd.idProducto" required>
+                        <option selected *ngFor="let prod of productos;" [value]="prod.idProducto">{{prod.nombre}}</option>
+                      </select>
+                      <label for="usuario" class="form-label">Producto</label>
+                    </div>
+                  </div>
+                  <div class="col col-md-3 text-center">
+                    <button *ngIf="pxd.cantidad>1" type="button" class="btn" (click)="quitarCantidad(x,pxd.idPedido, pxd.idProducto)">
+                      <i class="fa-solid fa-minus"></i>
+                    </button> 
+                    <button *ngIf="pxd.cantidad===1" type="button" class="btn" (click)="borraritemCarrito(pxd.idPedido, pxd.idProducto)">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button> 
+                    <input type="number" [(ngModel)]="pxd.cantidad" name="cantidad" id="cantidad" style="width:30px; text-align: center; border:none; text-align: right;" min="1" disabled>
+                    <button type="button" class="btn" (click)="agregarCantidad(x,pxd.idPedido, pxd.idProducto)">
+                      <i class="fa-solid fa-plus"></i>
+                    </button>
+                  </div>
+                  <div class="col col-md-2">
+                    $ {{pxd.total}} MXN
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-danger" *ngIf="!modifPedido" (click)="borrarPedido(idPedidox)">Borrar pedido</button>
+          <button type="button" class="btn btn-warning" *ngIf="!modifPedido" (click)="modificarPedido(idPedidox)">Modificar pedido</button>
+          <button type="button" class="btn btn-success" *ngIf="modifPedido" (click)="actualizarPrecios(idPedidox);">Guardar cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>

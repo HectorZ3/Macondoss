@@ -1,0 +1,130 @@
+body {
+    background-color: #f9f4ef;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #5e4534;
+}
+
+.nav-tabs .nav-link {
+    background-color: #d9c2a3;
+    color: #3f301d;
+    border-radius: 10px 10px 0 0;
+    border: none;
+    font-weight: bold;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #b88b63;
+    color: #ffffff;
+    border: none;
+}
+
+.tab-content {
+    background-color: #fff3e6;
+    padding: 20px;
+    border-radius: 0 10px 10px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    color: #5e4534;
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #d1bfa3;
+    background-color: #f7e7d1;
+    color: #6a4b35;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #b59373;
+}
+
+.btn-success {
+    background-color: #b88b63;
+    border-color: #a67c4a;
+    color: #ffffff;
+}
+
+.btn-success:hover {
+    background-color: #a67c4a;
+    border-color: #8f6838;
+}
+
+.table {
+    background-color: #fff3e6;
+    border: 1px solid #d1bfa3;
+    border-radius: 10px;
+}
+
+.table thead th {
+    background-color: #d9c2a3;
+    color: #3f301d;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+}
+
+.table tbody td {
+    color: #5e4534;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+}
+
+.table tbody tr:hover {
+    background-color: #f7e7d1;
+}
+
+.modal-content {
+    background-color: #fff3e6;
+    border-radius: 10px;
+    border: none;
+}
+
+.modal-header {
+    background-color: #d9c2a3;
+    color: #3f301d;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-body {
+    color: #5e4534;
+}
+
+.modal-footer .btn-danger {
+    background-color: #b88b63;
+    border-color: #a67c4a;
+    color: #ffffff;
+}
+
+.modal-footer .btn-danger:hover {
+    background-color: #a67c4a;
+    border-color: #8f6838;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #d1bfa3;
+    border-color: #b59373;
+    color: #3f301d;
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #b59373;
+    border-color: #a67c4a;
+}
+
+.alert-success {
+    background-color: #d9c2a3;
+    color: #3f301d;
+    border: none;
+}
+
+.alert-danger {
+    background-color: #f7c2c2;
+    color: #5e4534;
+    border: none;
+}

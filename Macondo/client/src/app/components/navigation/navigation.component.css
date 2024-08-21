@@ -1,0 +1,29 @@
+a{
+    margin-right: 40px;
+}
+/* Estilo para la barra de navegación */
+.navbar {
+    background-color: #B4E197; /* Verde pastel */
+  }
+  
+  .navbar-brand img {
+    width: 120px; /* Reducir el tamaño de la imagen */
+  }
+  
+  .fuente {
+    font-size: 18px;
+  }
+  
+  /* Opcional: Ajuste del margen si es necesario */
+  .navbar .navbar-brand {
+    margin-left: 10px;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #000; /* Cambiar el color del texto si es necesario */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #fff; /* Cambiar el color del texto al pasar el cursor */
+  }
+  

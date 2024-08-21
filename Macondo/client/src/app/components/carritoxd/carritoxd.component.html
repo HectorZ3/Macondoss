@@ -1,0 +1,60 @@
+<div class="container fuente" style="padding-left: 15%!important; padding-top: 3%;">
+  <div class="carrito-container">
+    <h2>Carrito</h2>
+    <div style="font-size: 12px;">
+      <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a style="color: blue; text-decoration: none;" href="/inicio">Inicio</a></li>
+          <li class="breadcrumb-item"><a style="color: blue; text-decoration: none;" href="/productos">Productos</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Carrito</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="row">
+      <div class="col col-md-10">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" class="text-center">Imagen</th>
+              <th scope="col">Producto</th>
+              <th scope="col" class="text-center">Cantidad</th>
+              <th scope="col" class="text-center">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let carrData of carritoList; let i = index;">
+              <span hidden>{{i + 1}}</span>
+              <td class="text-center"><img src="{{carrData.imagen}}" height="80px"></td>
+              <td style="padding-top: 35px;">{{carrData.nombre}}</td>
+              <td class="text-center" style="padding-top: 30px;">
+                <button *ngIf="carrData.cantidad>1" type="button" class="btn" (click)="quitarCantidad(i,carrData.idUsuario, carrData.idProducto)">
+                  <i class="fa-solid fa-minus"></i>
+                </button> 
+                <button *ngIf="carrData.cantidad===1" type="button" class="btn" (click)="borraritemCarrito(carrData.idUsuario, carrData.idProducto)">
+                  <i class="fa-solid fa-trash-can"></i>
+                </button> 
+                <input type="number" [(ngModel)]="carrData.cantidad" name="cantidad" id="cantidad" style="width:30px; text-align: center; border:none; text-align: right;" min="1" disabled>
+                <button type="button" class="btn" (click)="agregarCantidad(i,carrData.idUsuario, carrData.idProducto)"><i class="fa-solid fa-plus"></i></button></td>
+              <td class="text-center" style="padding-top: 35px;">$ {{carrData.precio}} MXN</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col" style="text-align: center;">Total: </th>
+              <th scope="col" style="text-align: center ;">$ {{total}} MXN</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-md-8">
+      </div>
+      <div class="col-md-2 text-center">
+        <a href="/informacion" [routerLink]="['/informacion']" class="btn btn-success" style="font-size: 10px!important;">Continuar</a>
+      </div>
+    </div>
+  </div>
+</div>

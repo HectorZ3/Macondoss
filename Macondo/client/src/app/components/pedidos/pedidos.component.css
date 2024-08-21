@@ -1,0 +1,117 @@
+.modal{
+    --bs-modal-width:700px!important;
+}
+body {
+    background-color: #f9f4ef;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #5e4534;
+}
+
+h1 {
+    color: #5e4534;
+    font-weight: bold;
+    padding-top: 50px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: #fff3e6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #f5e8d0;
+    border-bottom: 1px solid #d1bfa3;
+    color: #5e4534;
+}
+
+.card-body {
+    color: #5e4534;
+}
+
+.card-img-top {
+    border-radius: 10px;
+}
+
+.table {
+    background-color: #f7e7d1;
+    border-radius: 10px;
+    border: 1px solid #d1bfa3;
+    color: #5e4534;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+.table th {
+    background-color: #f5e8d0;
+    color: #5e4534;
+}
+
+.table td img {
+    border-radius: 5px;
+}
+
+.modal-content {
+    background-color: #fff3e6;
+    color: #5e4534;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background-color: #f5e8d0;
+    border-bottom: 1px solid #d1bfa3;
+    color: #5e4534;
+}
+
+.modal-footer .btn {
+    border-radius: 5px;
+}
+
+.btn-success {
+    background-color: #b88b63;
+    border-color: #a67c4a;
+    color: #ffffff;
+}
+
+.btn-success:hover {
+    background-color: #a67c4a;
+    border-color: #8f6838;
+}
+
+.btn-warning {
+    background-color: #f0ad4e;
+    border-color: #ec971f;
+    color: #ffffff;
+}
+
+.btn-warning:hover {
+    background-color: #ec971f;
+    border-color: #d58512;
+}
+
+.btn-danger {
+    background-color: #c9302c;
+    border-color: #ac2925;
+    color: #ffffff;
+}
+
+.btn-danger:hover {
+    background-color: #ac2925;
+    border-color: #761c19;
+}
+
+input[type="number"] {
+    border-radius: 5px;
+    border: 1px solid #d1bfa3;
+    background-color: #f7e7d1;
+    color: #6a4b35;
+}
+
+input[type="number"]:disabled {
+    background-color: #e8d9c4;
+}
